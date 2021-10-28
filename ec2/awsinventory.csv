@@ -1,0 +1,3 @@
+s.no,Instance_id,instance_type,launchtime,privateid,volumeid,instance_state
+1,i-034ea2894db820a43,t2.micro,2021-10-15,172.31.40.143,vol-068bd6ec8249381d9,stopped
+2,i-0430a5a39338dbe2d,t2.medium,2021-10-15,172.31.6.214,vol-0c42ab255f04afd5d,stopped

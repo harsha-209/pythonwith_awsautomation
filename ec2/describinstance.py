@@ -1,10 +1,17 @@
 
 import boto3
 import datetime
+import time
 
+x = datetime.datetime.now()
 
-#x = datetime.datetime(2020, 5, 17)
-#print(x)
+print(type(x))
+print(x)
+'''
+today_datetime = x.strftime("%Y-%m-%d %H:%M:%S")
+print(today_datetime)
+print(type(today_datetime))
+'''
 
 y = datetime.datetime.now().date()
 
@@ -29,12 +36,28 @@ for pythonins in Myec2['Reservations']:
 #        print(printout['Tags'])
         print("my instance id is :{}\n the instance launch time is {}\n".format(printout['InstanceId'],printout['LaunchTime'].strftime("%y-%m-%d")))
         a = printout['LaunchTime'].date()
+        '''
+        b = printout['LaunchTime'].strftime("%Y-%m-%d %H:%M:%S")
+        date_time_obj = datetime.datetime.strptime(b, "%Y-%m-%d %H:%M:%S")
+        print(date_time_obj)
+        print(type(date_time_obj))
+        print(type(b))
+        number_of_days = str(x - date_time_obj)
+        print('testing')
+        print(number_of_days)
+        print(number_of_days.strip('days, 6:27:53.638260'))
+        '''
         print(a)
         print(y)
         print(type(a))
         print(type(y))
         z = (y - a)
-        print(z)
+        print(z.strftime("%d"))
+        instance_created = str(z)
+        print(instance_created)
+        print(instance_created.strip('days, 0:00:00'))
+
+
         print("this instance is launched {}\n ago ".format(z)) 
 
         
