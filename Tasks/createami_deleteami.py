@@ -1,0 +1,1 @@
+#### create ami and delete ami where it age is above 7 days #################### and launch instance with new ami

@@ -14,9 +14,9 @@ response = ec2_con.describe_volumes(
         },
     ]
 )
+
 #print(response['Volumes'][0]['VolumeId'])
 ################################### deleting a volume #######################################
-
 for each_volume in response['Volumes']:
     print(each_volume['VolumeId'])
     delete_volume = ec2_con.delete_volume(VolumeId=each_volume['VolumeId'])
